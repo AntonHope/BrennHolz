@@ -1,0 +1,153 @@
+.delivery {
+	background-image: url("../../img/delivery-bg.png");
+	background-repeat: no-repeat;
+	background-position: center;
+
+	padding-bottom: 30px;
+}
+
+.delivery__wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.delivery__title {
+	margin-top: 30px;
+
+	font-size: 28px;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	color: rgb(226, 223, 218);
+}
+
+.delivery__description {
+	width: 300px;
+	margin-top: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+
+
+	text-align: center;
+	font-size: 24px;
+	color: rgb(226, 223, 218);
+}
+
+.delivery__calc {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: inherit;
+}
+.delivery__distance,
+.delivery__quantity {
+	width: 250px;
+
+	padding: 10px;
+	margin-bottom: 20px;
+
+	border: none;
+}
+
+.delivery__distance[placeholder],
+.delivery__quantity[placeholder] {
+	color: rgb(87, 84, 78);
+	background-color: rgb(226, 223, 218);
+	font-size: 22px;
+}
+
+.delivery__distance:active,
+.delivery__quantity:active,
+.delivery__distance:focus,
+.delivery__quantity:focus{
+	outline: 2px solid #F0E68C;
+} 
+
+.delivery__button {
+	width: 270px;
+
+	padding: 10px;
+
+	border: none;
+
+	background-color: rgb(206, 78, 78);
+	color: rgb(226, 223, 218);
+	font-size: 22px;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+}
+
+.delivery__button:hover,
+.delivery__button:focus {
+	cursor: pointer;
+	background-color: rgb(270, 78, 78);
+}
+
+.delivery__description-result {
+	margin-top: 20px;
+	margin-bottom: 20px;
+
+	width: 300px;
+
+	text-align: center;
+	font-size: 24px;
+	color: rgb(226, 223, 218);
+}
+
+.delivery__relust {
+	padding: 10px;
+
+	width: 250px;
+
+	background-color: inherit;
+
+	border: none;
+
+	text-align: center;
+	font-size: 28px;
+	color: rgb(226, 223, 218);
+}
+
+.delivery__relust:focus {
+	outline: none;
+}
+
+@media (min-width: @tablet-width) {
+	.delivery__description {
+		width: auto;
+	}
+	.delivery__calc {
+		flex-direction: row;
+		justify-content: center;
+		align-items: flex-start;
+		flex-wrap: wrap;
+	}
+	.delivery__distance {
+		margin-right: 30px;
+	}
+	.delivery__description-result {
+		width: 450px;
+	}
+
+	.delivery__button {
+		margin-right: 140px;
+		margin-left: 140px;
+	}
+	.delivery__relust {
+		padding: 0;
+		margin-top: 18px;
+
+		width: 130px;
+	}
+}
+
+@media (min-width: @desctop-width) {
+	.delivery__calc {
+		max-width: 1260px;
+	}
+	.delivery__button {
+		margin-right: 0;
+		margin-left: 30px;
+	}
+
+}

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>Brenn Holz</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<header class="header">
+  <div class="header__wrapper">
+    <nav class="main-nav main-nav--closed">
+      <button type="submit" class="main-nav__toggle" aria-label="Открыть/закрыть меню"></button>
+      <ul class="main-nav__list">
+        <li class="main-nav__item main-nav__logo-container"></li>
+        <li class="main-nav__item main-nav__item--active"><a href="#">Главная</a></li>
+        <li class="main-nav__item"><a href="#">Каталог</a></li>
+        <li class="main-nav__item"><a href="#">Доставка</a></li>
+        <li class="main-nav__item"><a href="#">Контакты</a></li>
+      </ul>
+    </nav>
+    <section class="header__title">
+      <div class="header__logo">
+        <img src="img/logo.png" width="150" height="100" align="логотип Brenn Holz">
+      </div>
+      <b class="header__descriptions">ЕВРОПЕЙСКОЕ КАЧЕСТВО ДОМАШНЕГО ТЕПЛА</b>
+      <p class="header__promo">Экологически чистые брикеты, изготовленные из 100% чистых опилок лиственных и хвойных пород деревьев </p>
+    </section>
+  </div>
+</header>
+
+<body>
+  <main class="main">
+    <section class="catalog">
+      <div class="catalog__wrapper">
+        <h1 class="catalog__title">Каталог</h1>
+        <p class="catalog__description">Восококачественные брикеты из природных материалов</p>
+        <ul class="catalog__list">
+          <li class="catalog__item">
+            <a class="catalog__link" href="#">
+              <div class="catalog__img-wrapper">
+                <img class="catalog__img" src="img/pini-kay.png" height="300" width="300" alt="pini-kay">
+              </div>
+              <h2 class="catalog__item-title">pini&kay</h2>
+              <p class="catalog__item-description">Топливные брикеты, подходящие для растапливания дачных каминнов, печей. Не содержит химических элементов.</p>
+              <b class="catalog__price">8000 / тонна</b>
+              <a class="button catalog__button" href="#">сделать заказ</a>
+            </a>
+          </li>
+          <li class="catalog__item">
+            <a href="#">
+              <div class="catalog__img-wrapper">
+                <img class="catalog__img" src="img/ruf.jpg" height="300" width="300" alt="ruf">
+              </div>
+              <h2 class="catalog__item-title">RUF. Береза (пыль)</h2>
+              <p class="catalog__item-description">Топливные пылевые брикеты, имеющие наиболее большую теплоотдачу и наименьшую зольность. </p>
+              <b class="catalog__price">7400 / тонна</b>
+              <a class="button catalog__button" href="#">сделать заказ</a>
+            </a>
+          </li>
+          <li class="catalog__item">
+            <a href="#">
+              <div class="catalog__img-wrapper">
+                <img class="catalog__img" src="img/pellet.jpg" height="300" width="300" alt="pellet">
+              </div>
+              <h2 class="catalog__item-title">Пеллет серый</h2>
+              <p class="catalog__item-description">Биологическое топливо, изготовленное из экологически чистого природного материала.
+              </p>
+              <b class="catalog__price">7000 / тонна</b>
+              <a class="button catalog__button" href="#">сделать заказ</a>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="advantages">
+      <div class="advantages__wrapper">
+        <h1 class="advantages__title">Преимущества</h1>
+        <p class="advantages__description">Нулевое содержание химических и клеящих связывающих элементов делают древесные брикеты
+        лучшим выбором для использования их в качестве отопления дома и приготовление еды.</p>
+        <ul class="advantages__list">
+          <li class="advantages__item">
+            <h2 class="advantages__item-title">Экологичность</h2>
+            <p class="advantages__item-description">Брикеты изготовлены из отходов
+            100% натуральной древесины методом
+            спресовывания. Это позволяет избежать
+            лишней вырубки и деревьев и сохранить
+            окружающую среду.</p>
+          </li>
+          <li class="advantages__item">
+            <h2 class="advantages__item-title">Эффективность</h2>
+            <p class="advantages__item-description">Евро дрова поддерживают большую
+            температуру горения, чем дрова,
+            не выделяют искру, опасный креозот
+            и меньшее количество дыма.</p>
+          </li>
+          <li class="advantages__item">
+            <h2 class="advantages__item-title">Удобство</h2>
+            <p class="advantages__item-description">Хранить брикеты можно в любом
+            удобном сухом месте, что делает их
+            идеальным решением для тех, кто устал
+            от колки дров и переноски их из
+            отдельно стоящих дровниц.</p>
+          </li>
+          <li class="advantages__item">
+            <h2 class="advantages__item-title">Чистота</h2>
+            <p class="advantages__item-description">После горения брикеты выделяют
+            только 1% золы, позволяя выделять
+            меньшее время на чистку печи и
+            избежать проблем с засорением
+            дымоходной трубы.</p>
+          </li>
+        </ul>
+        <a class="button advantages__button" href="#">Каталог товаров</a>
+      </div>
+    </section>
+    <section class="delivery">
+      <div class="delivery__wrapper">
+        <h1 class="delivery__title">Доставка</h1>
+        <p class="delivery__description">Рассчитайте стоимость доставки, заполнив форму ниже</p>
+        <form class="delivery__calc">
+          <input class="delivery__distance" type="number" name="distance" min="1" max="1000000" placeholder="Расстояние доставки, км">
+          <input class="delivery__quantity" type="number" name="quantity" placeholder="Количество, кг">
+          <button class="delivery__button">Рассчитать</button>
+          <label class="delivery__description-result" for="result">Ваша стомость доставки стоставит, рублей:</label>
+          <input class="delivery__relust" type="text" name="relult" id="result" value="10">
+        </form>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>
