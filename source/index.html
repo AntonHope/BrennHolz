@@ -3,72 +3,108 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Brenn Holz</title>
+  <title>Brenn Holz | Евро-дрова европеского качества</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
-<header class="header">
-  <div class="header__wrapper">
-    <nav class="main-nav main-nav--closed">
-      <button type="submit" class="main-nav__toggle" aria-label="Открыть/закрыть меню"></button>
-      <ul class="main-nav__list">
-        <li class="main-nav__item main-nav__logo-container"></li>
-        <li class="main-nav__item main-nav__item--active"><a href="#">Главная</a></li>
-        <li class="main-nav__item"><a href="#">Каталог</a></li>
-        <li class="main-nav__item"><a href="#">Доставка</a></li>
-        <li class="main-nav__item"><a href="#">Контакты</a></li>
-      </ul>
-    </nav>
-    <section class="header__title">
-      <div class="header__logo">
-        <img src="img/logo.png" width="150" height="100" align="логотип Brenn Holz">
-      </div>
-      <b class="header__descriptions">ЕВРОПЕЙСКОЕ КАЧЕСТВО ДОМАШНЕГО ТЕПЛА</b>
-      <p class="header__promo">Экологически чистые брикеты, изготовленные из 100% чистых опилок лиственных и хвойных пород деревьев </p>
-    </section>
-  </div>
-</header>
 
 <body>
+  <section class="popup">
+    <div class="popup__fixed-overlay">
+      <form class="popup__order" id="modal-popap" action="" method="get">
+        <div class="popup__content">
+          <input class="popup__field" type="text" name="login" id="name" placeholder="Имя Фамилия" tabindex="1" autofocus>
+          <input class="popup__field" type="email" name="email" id="email" placeholder="email@example.com" tabindex="2">
+          <input class="popup__field" type="tel" name="telefon" id="telefon" placeholder="Ваш телефон" tabindex="3">
+          <select class="popup__field-select" type="product" name="product" id="product" tabindex="4" placeholder="">
+            <option>ПЕЛЛЕТ БЕЛЫЙ</option>
+            <option>RUF. БЕРЕЗА (ПЫЛЬ)</option>
+            <option>PINI&KAY</option>
+          </select>
+          <input class="popup__field" type="number" name="kg" id="kg" tabindex="5" placeholder="Количество кг">
+          <input class="popup__field" type="adress" name="adress" id="adress" placeholder="Адрес доставки" tabindex="3">
+          <textarea class="popup__field-textarea" name="text" id="text" placeholder="Комментарии к заказу" tabindex="6"></textarea>
+          <a href="#" class="popup__close"></a>
+          <input class="popup__button-order" type="submit" name="button" value="Заказать">
+        </div>
+      </form>
+    </div>
+  </section>
+  <section class="popup-yes">
+    <div class="popup-yes__fixed-overlay">
+    <div class="popup-yes__wrapper">
+      <p class="popup-yes__description">Спасибо за Ваш заказ, мы перезвоним Вам в течении дня!</p>
+    </div>
+    </div>
+  </section>
+  <header class="header">
+    <div class="header__wrapper">
+      <nav class="main-nav main-nav--closed">
+        <label class="main-nav__toggle" for="open"></label>
+        <button type="submit" id="open" aria-label="Открыть меню"></button>
+        <label class="main-nav__toggle-close" for="close"></label>
+        <button type="submit" id="close"  aria-label="Закрыть меню"></button>
+        <ul class="main-nav__list">
+          <li class="main-nav__item main-nav__logo-container"></li>
+          <li class="main-nav__item main-nav__item--active"><a>Главная</a></li>
+          <li class="main-nav__item"><a href="#target-catalog">Каталог</a></li>
+          <li class="main-nav__item"><a href="#target-delivery">Доставка</a></li>
+          <li class="main-nav__item"><a href="#target-contacts">Контакты</a></li>
+        </ul>
+      </nav>
+      <section class="header__title">
+        <div class="header__logo">
+          <img src="img/logo.png" width="150" height="100" align="логотип Brenn Holz">
+        </div>
+        <b class="header__descriptions">ЕВРОПЕЙСКОЕ КАЧЕСТВО ДОМАШНЕГО ТЕПЛА</b>
+        <p class="header__promo">Экологически чистые пеллеты и брикеты, изготовленные из хвойных пород деревьев</p>
+      </section>
+    </div>
+  </header>
   <main class="main">
-    <section class="catalog">
+    <section id="target-catalog" class="catalog">
       <div class="catalog__wrapper">
         <h1 class="catalog__title">Каталог</h1>
-        <p class="catalog__description">Восококачественные брикеты из природных материалов</p>
+        <p class="catalog__description">Высококачественные пеллеты и брикеты</p>
         <ul class="catalog__list">
           <li class="catalog__item">
-            <a class="catalog__link" href="#">
+            <a class="catalog__link" href="#target-catalog">
               <div class="catalog__img-wrapper">
                 <img class="catalog__img" src="img/pini-kay.png" height="300" width="300" alt="pini-kay">
               </div>
               <h2 class="catalog__item-title">pini&kay</h2>
-              <p class="catalog__item-description">Топливные брикеты, подходящие для растапливания дачных каминнов, печей. Не содержит химических элементов.</p>
-              <b class="catalog__price">8000 / тонна</b>
-              <a class="button catalog__button" href="#">сделать заказ</a>
+              <p class="catalog__item-description">
+              Топливные брикеты, идеально подходящие для топки в каминах и печах.</p>
+              <p class="catalog__price">Биг Бэг - 9000 / тонна</p>
+              <p class="catalog__price">Пакетами по 15/25кг - 10000/ тонна</p>
+              <a class="button catalog__button2" href="#modal-popap">сделать заказ</a>
             </a>
           </li>
           <li class="catalog__item">
-            <a href="#">
+            <a href="#target-catalog">
               <div class="catalog__img-wrapper">
                 <img class="catalog__img" src="img/ruf.jpg" height="300" width="300" alt="ruf">
               </div>
               <h2 class="catalog__item-title">RUF. Береза (пыль)</h2>
-              <p class="catalog__item-description">Топливные пылевые брикеты, имеющие наиболее большую теплоотдачу и наименьшую зольность. </p>
-              <b class="catalog__price">7400 / тонна</b>
-              <a class="button catalog__button" href="#">сделать заказ</a>
+              <p class="catalog__item-description">Топливные пылевые брикеты, сочетающие в себе наибольшую теплоотдачу и наименьшую зольность. </p>
+              <p class="catalog__price">Биг Бэг - 9000 / тонна</p>
+              <p class="catalog__price">Пакетами по 15/25кг - 10000/ тонна</p>
+               <a class="button catalog__button3" href="#modal-popap">сделать заказ</a>
             </a>
           </li>
           <li class="catalog__item">
-            <a href="#">
+            <a href="#target-catalog">
               <div class="catalog__img-wrapper">
                 <img class="catalog__img" src="img/pellet.jpg" height="300" width="300" alt="pellet">
               </div>
-              <h2 class="catalog__item-title">Пеллет серый</h2>
-              <p class="catalog__item-description">Биологическое топливо, изготовленное из экологически чистого природного материала.
+              <h2 class="catalog__item-title">Пеллет белый</h2>
+              <p class="catalog__item-description">Древесные-топливные гранулы, изготовлены из древесного сырья.Отлично подходят для котлов.
+
               </p>
-              <b class="catalog__price">7000 / тонна</b>
-              <a class="button catalog__button" href="#">сделать заказ</a>
+              <p class="catalog__price">Биг Бэг - 9000 / тонна</p>
+              <p class="catalog__price">Пакетами по 15/25кг - 10000/ тонна</p>
+              <a class="button catalog__button" href="#modal-popap">сделать заказ</a>
             </a>
           </li>
         </ul>
@@ -77,58 +113,59 @@
     <section class="advantages">
       <div class="advantages__wrapper">
         <h1 class="advantages__title">Преимущества</h1>
-        <p class="advantages__description">Нулевое содержание химических и клеящих связывающих элементов делают древесные брикеты
-        лучшим выбором для использования их в качестве отопления дома и приготовление еды.</p>
+        <p class="advantages__description">Нулевое содержание посторонних химических элементов и клеящих связывающих агентов делают древесные брикеты лучшим выбором для использования их в качестве отопления дома и приготовление еды.</p>
         <ul class="advantages__list">
           <li class="advantages__item">
             <h2 class="advantages__item-title">Экологичность</h2>
-            <p class="advantages__item-description">Брикеты изготовлены из отходов
-            100% натуральной древесины методом
-            спресовывания. Это позволяет избежать
-            лишней вырубки и деревьев и сохранить
-            окружающую среду.</p>
+            <p class="advantages__item-description">Брикеты и пеллеты изготовлены из отходов хвойной древесины методом пресования. Это позволяет избежать лишней вырубки деревьев и сохранить окружающую среду.</p>
           </li>
           <li class="advantages__item">
             <h2 class="advantages__item-title">Эффективность</h2>
-            <p class="advantages__item-description">Евро дрова поддерживают большую
-            температуру горения, чем дрова,
-            не выделяют искру, опасный креозот
-            и меньшее количество дыма.</p>
+            <p class="advantages__item-description">
+            Если проводить сравнение, то одна тонна пеллет соизмерима по энергоемкости почти
+            тысяче литров дизельного топлива или 480 кубическим метрам газа.</p>
           </li>
           <li class="advantages__item">
             <h2 class="advantages__item-title">Удобство</h2>
-            <p class="advantages__item-description">Хранить брикеты можно в любом
-            удобном сухом месте, что делает их
-            идеальным решением для тех, кто устал
-            от колки дров и переноски их из
-            отдельно стоящих дровниц.</p>
-          </li>
+            <p class="advantages__item-description">Пеллеты подаются в котел отопления автоматически, который при определенном режиме может неделю автономно работать. Брикеты же храняться в любом удобном сухом месте.
           <li class="advantages__item">
             <h2 class="advantages__item-title">Чистота</h2>
-            <p class="advantages__item-description">После горения брикеты выделяют
-            только 1% золы, позволяя выделять
-            меньшее время на чистку печи и
-            избежать проблем с засорением
-            дымоходной трубы.</p>
+            <p class="advantages__item-description">После горения брикеты выделяют только 1% золы, позволяя тратить меньше времени на чистку печи и избежать проблем с засорением дымоходной трубы.</p>
           </li>
         </ul>
-        <a class="button advantages__button" href="#">Каталог товаров</a>
+        <a class="button advantages__button" href="#target-catalog">Каталог товаров</a>
       </div>
     </section>
-    <section class="delivery">
+    <section id="target-delivery" class="delivery">
       <div class="delivery__wrapper">
         <h1 class="delivery__title">Доставка</h1>
-        <p class="delivery__description">Рассчитайте стоимость доставки, заполнив форму ниже</p>
+        <p class="delivery__description">Стоимость доставки можно уточнить у нашего менеджера по телефону: </p>
+        <p><a  class="delivery__telephone" href="">8-800-000-00-00</a></p>
+
+        <!-- <p class="delivery__description">Рассчитайте стоимость доставки, заполнив форму ниже</p>
         <form class="delivery__calc">
-          <input class="delivery__distance" type="number" name="distance" min="1" max="1000000" placeholder="Расстояние доставки, км">
+          <input class="delivery__distance" type="number" name="distance" min="1" max="1000000" placeholder="Расстояние доставки,км">
           <input class="delivery__quantity" type="number" name="quantity" placeholder="Количество, кг">
           <button class="delivery__button">Рассчитать</button>
           <label class="delivery__description-result" for="result">Ваша стомость доставки стоставит, рублей:</label>
           <input class="delivery__relust" type="text" name="relult" id="result" value="10">
-        </form>
+        </form> -->
       </div>
     </section>
   </main>
+  <section id="target-contacts" class="footer">
+    <img class="footer__logo" src="img/footer-logo.png" width="150" height="150" align="логотип Brenn Holz">
+    <div class="footer__contacts">
+      <p class="footer__telefon">Наш телефон: <a class="footer__telefon-link" href="">8-800-000-00-00</a></p>
+      <p class="footer__email">Наш e-mail: contact@brenholz.com</p>
+    </div>
+    <ul class="footer__menu">
+      <li class="footer__menu-item"><a href="#">Главная</a></li>
+      <li class="footer__menu-item"><a href="#target-catalog">Каталог</a></li>
+      <li class="footer__menu-item"><a href="#target-delivery">Доставка</a></li>
+    </ul>
+  </section>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
